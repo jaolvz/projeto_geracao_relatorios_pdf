@@ -456,11 +456,4 @@ for funcionario in todos_funcionarios:
         pdf.cell(40, 10, f'{rzsocial}')
         pdf.ln()
 
-    pdf.ln(50)
-    # Definir a largura da linha como 1/3 da largura do PDF
-    line_width = (pdf.w - 20) / 3  # Subtraímos 20 para considerar as margens (10 de cada lado)
-    x_start = (pdf.w - line_width) / 2
-    pdf.line(x_start, pdf.get_y() - 10, x_start + line_width, pdf.get_y() - 10)
-    pdf.cell(0, 10, 'Assinatura',align='C')
-
     pdf.output(f'{nome_foco}.pdf')  
